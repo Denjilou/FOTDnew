@@ -53,49 +53,56 @@ position:fixed;
 	background: rgba(0,0,0,0.5);
 	text-align:center;
 	font-weight:bold;
-	border: 2px solid;
+	border: 2px solid black;
 	width:450px;
 	height:280px;
 	top:50px;
 	left:330px;
-	
+	transition: all 0.7s ease;
+	opacity:0;
+	border-radius: 3px;
 }
 #content2{
 	position:fixed;
 	background: rgba(0,0,0,0.5);
 	text-align:center;
 	font-weight:bold;
-	border: 2px solid;
+	border: 2px solid black;
 	width:450px;
 	height:280px;
 	top:50px;
 	right:130px;
-	
-	
+		transition: all 0.7s ease;
+		opacity:0;
+			border-radius: 3px;
 }
 #content3{
 	position:fixed;
 	background: rgba(0,0,0,0.5);
 	text-align:center;
 	font-weight:bold;
-	border: 2px solid;
+	border: 2px solid black;
 	width:450px;
 	height:280px;
 	top:332px;
 	left:330px;
-	
+		transition: all 0.7s ease;
+		opacity:0;
+			border-radius: 3px;
 }
 #content4{
 	position:fixed;
 	background: rgba(0,0,0,0.5);
 	text-align:center;
 	font-weight:bold;
-	border: 2px solid;
+	border: 2px solid black;
 	width:450px;
 	height:280px;
 	top:332px;
 	right:130px;
-	
+	opacity:0;
+	transition: all 0.7s;
+		border-radius: 3px;
 }
 #content5 {
 	display:none;
