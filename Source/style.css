@@ -75,7 +75,17 @@ position:fixed;
 	height:502px;
 	top:50px;
 	left:330px;
-	
+}
+#closeDiv {
+	position:fixed;
+	background: rgba(255,255,255,0.5);
+	text-align:center;
+	font-weight:bold;
+	border: 2px solid;
+	width:30px;
+	height:30px;
+	top:50px;
+	right:329px;
 }
 #navigation{
 }
