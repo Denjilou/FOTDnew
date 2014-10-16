@@ -142,7 +142,7 @@ function changeSnacks(){
 	
 	document.getElementById("content4").innerHTML = "";
 	var img = document.createElement("img");
-	link = "resources/images/c/Halohalo.png";
+	link = "resources/images/c/BBQ.png";
 	img.setAttribute("src",link);
 	img.setAttribute("height","280px");
 	img.setAttribute("width","450px");
