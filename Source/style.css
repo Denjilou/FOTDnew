@@ -1,16 +1,23 @@
+body{
+	background-image: url(resources/page/bg.png);
+	background-size: cover;
+	color:gray;
+	font-family:Georgia;
+}
+
 #heading{
 }
 #heads{
 	background: rgba(255,255,225, 0.5);
 	text-align:center;
 	font-weight:bold;
-
-
 }
 #content{
 
 }
 #content1{
+position:fixed;
+	background: rgba(0,0,0,0.5);
 	text-align:center;
 	font-weight:bold;
 	border: 2px solid;
@@ -18,9 +25,11 @@
 	height:250px;
 	top:50px;
 	left:330px;
-	position:fixed;
+	
 }
 #content2{
+	position:fixed;
+	background: rgba(0,0,0,0.5);
 	text-align:center;
 	font-weight:bold;
 	border: 2px solid;
@@ -28,10 +37,12 @@
 	height:250px;
 	top:50px;
 	right:330px;
-	position:fixed;
+	
 	
 }
 #content3{
+	position:fixed;
+	background: rgba(0,0,0,0.5);
 	text-align:center;
 	font-weight:bold;
 	border: 2px solid;
@@ -39,9 +50,11 @@
 	height:250px;
 	top:302px;
 	left:330px;
-	position:fixed;
+	
 }
 #content4{
+	position:fixed;
+	background: rgba(0,0,0,0.5);
 	text-align:center;
 	font-weight:bold;
 	border: 2px solid;
@@ -49,10 +62,21 @@
 	height:250px;
 	top:302px;
 	right:330px;
-	position:fixed;
 	
 }
-
+#content5 {
+	display:none;
+	position:fixed;
+	background: rgba(0,0,0,0.5);
+	text-align:center;
+	font-weight:bold;
+	border: 2px solid;
+	width:705px;
+	height:502px;
+	top:50px;
+	left:330px;
+	
+}
 #navigation{
 }
 #foot{
