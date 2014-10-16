@@ -2,15 +2,48 @@ body{
 	background-image: url(resources/page/bg.png);
 	background-size: cover;
 	color:gray;
-	font-family:Georgia;
+	font-family:Segoe UI;
 }
+#title {
+position:fixed;
+top:1%;
+left: 2%;
+}
+a{
+ color: white;
+ text-decoration:none;
+	}
+a:visted {
+	color: white;
+	}
+a:hover{
+	color: gray;
+	}
 
-#heading{
+#navi{
+position:fixed;
+top:1%;
+right: 1%
 }
-#heads{
-	background: rgba(255,255,225, 0.5);
-	text-align:center;
+.navig{
+
+}
+.navig:hover{
+	background: rgba(255,255,225,0.5);
+padding:0.05em;
+border-radius:2px;
+	transition: all 0.7s ease;
+}
+#header{
+	background: rgba(0,0,0, 0.5);
+	font-size: 20px;
+	position:fixed;
+	height: 8%;
+	width: 100%;
+	top:-2%;
+	left:0%;
 	font-weight:bold;
+	color: white;
 }
 #content{
 
@@ -21,8 +54,8 @@ position:fixed;
 	text-align:center;
 	font-weight:bold;
 	border: 2px solid;
-	width:350px;
-	height:250px;
+	width:450px;
+	height:280px;
 	top:50px;
 	left:330px;
 	
@@ -33,10 +66,10 @@ position:fixed;
 	text-align:center;
 	font-weight:bold;
 	border: 2px solid;
-	width:350px;
-	height:250px;
+	width:450px;
+	height:280px;
 	top:50px;
-	right:330px;
+	right:130px;
 	
 	
 }
@@ -46,9 +79,9 @@ position:fixed;
 	text-align:center;
 	font-weight:bold;
 	border: 2px solid;
-	width:350px;
-	height:250px;
-	top:302px;
+	width:450px;
+	height:280px;
+	top:332px;
 	left:330px;
 	
 }
@@ -58,10 +91,10 @@ position:fixed;
 	text-align:center;
 	font-weight:bold;
 	border: 2px solid;
-	width:350px;
-	height:250px;
-	top:302px;
-	right:330px;
+	width:450px;
+	height:280px;
+	top:332px;
+	right:130px;
 	
 }
 #content5 {
@@ -71,32 +104,41 @@ position:fixed;
 	text-align:center;
 	font-weight:bold;
 	border: 2px solid;
-	width:705px;
-	height:502px;
+	width:902px;
+	height:562px;
 	top:50px;
 	left:330px;
 }
 #closeDiv {
 	position:fixed;
 	background: rgba(255,255,255,0.5);
+	vertical-align:center;
+	padding-top: .5em;
 	text-align:center;
 	font-weight:bold;
-	border: 2px solid;
+	border: 2px solid gray;
 	width:30px;
 	height:30px;
 	top:50px;
-	right:329px;
+	right:130px;
+	color:white;
 }
-#navigation{
-}
+
 #foot{
-	text-align:center;
 	font-weight:bold;
-	top:500px;
+	position:fixed;
+	bottom: -1%;
+	left:30%;
+	width: 100%;
 
 }
 #footer{
-	text-align:center;
+	background: rgba(0,0,0, 0.5);
+	width: 100%;
+	height:5%;
+	left:0;
 	font-weight:bold;
-	top:500px;
+	bottom:0%;
+	position:fixed;
+	color: white;
 }
