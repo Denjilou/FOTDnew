@@ -27,13 +27,7 @@ document.getElementById("content4").style.backgroundSize = "cover";
 var pos = 0;
 setTimeout(changePlace, 1000)
 function changePlace(){
-document.getElementById("content1").style.opacity = "1";
-document.getElementById("content2").style.opacity = "1";
-document.getElementById("content3").style.opacity = "1";
-document.getElementById("content4").style.opacity = "1";
-
 	if (pos == 0){
-	
 		document.getElementById("content1").style.left = "57.3%";
 		
 		document.getElementById("content2").style.top = "332px";
@@ -95,7 +89,4 @@ document.getElementById("content4").style.opacity = "1";
 	pos = Math.floor(Math.random() * 3);	
 		setTimeout(changePlace, 4000)
 	}
-	
-
-
 }
