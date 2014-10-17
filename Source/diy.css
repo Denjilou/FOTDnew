@@ -1,0 +1,45 @@
+#content5 {
+	display:block;
+	color:white;
+	border-color:black;
+}
+#manong{
+	position:fixed;
+	left:30%;
+	top: 24%;
+}
+#cm{
+	font-weight:bold;
+	font-size:40px;
+	position:fixed;
+	left:45%;
+	top: 25%;
+}
+#con{
+	font-size:20px;
+	position:fixed;
+	left:50%;
+	top: 45%;
+}
+.meal1{
+font-size: 25px;
+color: white;
+background: rgba(0,0,0,.6);
+width: 15%;
+height: 6%;
+
+}
+#a{
+position:fixed;
+	left:50%;
+	top: 60%;
+}
+#b{
+position:fixed;
+	left:70%;
+	top: 60%;
+}
+.meal1:hover{
+background: transparent;
+transition: all 0.7s ease;
+}
