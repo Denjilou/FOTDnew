@@ -50,6 +50,12 @@ document.getElementById("b").innerHTML = "Snacks";
 function listMeal(){
 	document.getElementById("content5").innerHTML = "";
 	
+	var meal = document.createElement("p");
+	meal.setAttribute("id","con1");
+	meal.setAttribute("onClick","listMeal()")
+	document.getElementById("content5").appendChild(meal);
+	document.getElementById("con1").innerHTML = "Choose a Meal you want to make!";
+	
 	var img = document.createElement("img");
 	img.setAttribute("id","adobo");
 	img.setAttribute("class","notes");
@@ -70,6 +76,11 @@ function listMeal(){
 }
 function listSnack(){
 	document.getElementById("content5").innerHTML = "";
+		var meal = document.createElement("p");
+	meal.setAttribute("id","con1");
+	meal.setAttribute("onClick","listMeal()")
+	document.getElementById("content5").appendChild(meal);
+	document.getElementById("con1").innerHTML = "Choose a Snack you want to make!";
 	
 	var img = document.createElement("img");
 	img.setAttribute("id","carbonara");

@@ -21,6 +21,12 @@
 	left:50%;
 	top: 45%;
 }
+#con1{
+	font-size:20px;
+	position:fixed;
+	left:50%;
+	top: 10%;
+}
 .meal1{
 font-size: 25px;
 color: white;
