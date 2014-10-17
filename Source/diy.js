@@ -1,3 +1,4 @@
+var objectName;
 function Recipe(_name){
 	this.name=_name;
 	this.ing = [];
@@ -118,6 +119,7 @@ function Restore(){
 	document.getElementById("closeDiv").style.display = "none"
 }
 function showIng(_name,_obj){
+	objectName = _obj;
 	document.getElementById("content6").innerHTML = "";
 
 	document.getElementById("content6").style.display = "block";
@@ -146,10 +148,17 @@ function showIng(_name,_obj){
 		var cont = document.getElementById("mealdiv").innerHTML;	
 		document.getElementById("mealdiv").innerHTML = cont + (i+1) + ".) "+ _obj.ing[i] + "<br>";
 	}
-	
+	console.log(_obj);
 	var meal = document.createElement("p");
 	meal.setAttribute("id","continue");
+	meal.setAttribute("onClick","stepOne()");
 	document.getElementById("content6").appendChild(meal);
 	document.getElementById("continue").innerHTML = "Click to Proceed >";
+}
+function stepOne(){
+console.log(objectName.name);
+	document.getElementById("content6").style.display = "none";
+	document.getElementById("closeDiv").style.display = "none";
+	document.getElementById("content5").innerHTML = "";
 	
 }

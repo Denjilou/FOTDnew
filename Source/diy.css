@@ -123,11 +123,18 @@ transition: all 0.7s ease;
 }
 #continue{
 	background:rgba(0,0,0,.7);
-	padding: .5em;
+	padding: .2em;
 	color: white;
 	font-size:30px;
 	font-weight:bold;
 	position:fixed;
 	left:73%;
 	top: 78%;
+}
+#continue:hover{
+	background:rgba(255,255,255,.4);
+	padding: .2em;
+	color: black;
+	transition: all 0.7s linear;
+	border-radius: 5px;
 }
