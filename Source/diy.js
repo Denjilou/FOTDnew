@@ -28,9 +28,13 @@ carbonara.ing = ["noodles","ham","bacon","cream"];
 pizza.ing = ["dough","tomato sauce","pepperoni", "cheese"];
 burger.ing = ["buns","patty","cheese","mayo","ketchup"];
 //steps
+<<<<<<< HEAD
 adobo.steps = ["Heat the frying pan, add oil","Sauté garlic","Add pork","Add Sugar, Soy Sauce, Water and Vinegar. Simmer until sauce is thick","Add bayleaves","Serve with Rice"];
 //sequence
 adobo.sequence = ["mantika","bawang","baboy",["toyo","suka","tubig","asukal"],"bayleaves"];
+=======
+adobo.steps = ["Marinate pork belly, soy sauce, bay leaves & garlic for at least 1 hour in a pan or wok.","Turn on the stove.","Add water and simmer for 30-45 minutes.","Add vinegar and simmer for 10-15 minutes.","Turn off the stove and remove marinade (sauce) leaving the meat, garlic & bay leaves in the wok.","Turn on the stove to medium heat, add cooking oil and stir fry the meat in the wok for 5-10 minutes.","Serve with hot rice. Enjoy!"];
+>>>>>>> origin/master
 
 var cm = document.createElement("img");
 cm.setAttribute("id","manong");
@@ -39,7 +43,7 @@ document.getElementById("content5").appendChild(cm);
 
 var p = document.createElement("p");
 p.setAttribute("id","cm");
-document.getElementById("content5").appendChild(p);
+document.getElementById("content5").appendChild(p); 
 document.getElementById("cm").innerHTML = "Welcome to Cooking Manong!";
 
 var p = document.createElement("p");
