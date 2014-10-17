@@ -10,6 +10,10 @@ var kaldereta = new Recipe("kaldereta");
 var karekare = new Recipe("karekare");
 var tinola = new Recipe("tinola");
 var pinakbet = new Recipe("pinakbet");
+var carbonara = new Recipe("carbonara");
+var pizza = new Recipe("pizza");
+var burger = new Recipe("burger");
+
 
 alling.ing= ["kalabasa","beef","manok","kamatis","sayote","malunggay","luya","paminta","asin","okra","sitaw","pechay","talong","sibuyas","bawang","peanutbutter","alamang","toyo","suka","baboy","tubig","asukal","bayleaves","mantika","patatas","liverspread","sili","cheese","peas","carrots"];
 adobo.ing = ["bawang","toyo","suka","baboy","tubig","asukal","bayleaves","mantika"];
@@ -17,6 +21,9 @@ kaldereta.ing = ["mantika","patatas","liverspread","beef","tubig","sili","cheese
 karekare.ing = ["beef","tubig","sitaw","pechay","talong","sibuyas","bawang","peanutbutter","alamang"];
 tinola.ing=["manok","malunggay","sayote","tubig","mantika","luya","bawang","sibuyas"];
 pinakbet.ing=["baboy","bawang","kamatis","asin","luya","paminta","sibuyas","tubig","kalabasa","alamang","okra","sitaw","talong",];
+carbonara.ing = ["noodles","ham","bacon","cream"];
+pizza.ing = ["dough","tomato sauce","pepperoni", "cheese"];
+burger.ing = ["buns","patty","cheese","mayo","ketchup"];
 
 var cm = document.createElement("img");
 cm.setAttribute("id","manong");
@@ -57,20 +64,23 @@ function listMeal(){
 	document.getElementById("con1").innerHTML = "Choose a Meal you want to make!";
 	
 	var img = document.createElement("img");
-	img.setAttribute("id","adobo");
+	img.setAttribute("id","adobo1");
+	img.setAttribute("onClick", "showIng('adobo',adobo)")
 	img.setAttribute("class","notes");
 	img.setAttribute("src","resources/diy/adobo.png");
 	document.getElementById("content5").appendChild(img);
 	
 	var img = document.createElement("img");
-	img.setAttribute("id","karekare");
+	img.setAttribute("id","karekare1");
+	img.setAttribute("onClick", "showIng('karekare',karekare)")
 	img.setAttribute("class","notes");
 	img.setAttribute("src","resources/diy/karekare.png");
 	document.getElementById("content5").appendChild(img);
 	
 	var img = document.createElement("img");
-	img.setAttribute("id","kaldereta");
+	img.setAttribute("id","kaldereta1");
 	img.setAttribute("class","notes");
+	img.setAttribute("onClick", "showIng('kaldereta',kaldereta)")
 	img.setAttribute("src","resources/diy/kaldereta.png");
 	document.getElementById("content5").appendChild(img);
 }
@@ -83,20 +93,63 @@ function listSnack(){
 	document.getElementById("con1").innerHTML = "Choose a Snack you want to make!";
 	
 	var img = document.createElement("img");
-	img.setAttribute("id","carbonara");
+	img.setAttribute("id","carbonara1");
 	img.setAttribute("class","notes");
+	img.setAttribute("onClick", "showIng('carbonara',carbonara)")
 	img.setAttribute("src","resources/diy/carbonara.png");
 	document.getElementById("content5").appendChild(img);
 	
 	var img = document.createElement("img");
-	img.setAttribute("id","pizza");
+	img.setAttribute("id","pizza1");
 	img.setAttribute("class","notes");
+	img.setAttribute("onClick", "showIng('pizza',pizza)")
 	img.setAttribute("src","resources/diy/pizza.png");
 	document.getElementById("content5").appendChild(img);
 	
 	var img = document.createElement("img");
-	img.setAttribute("id","burger");
+	img.setAttribute("id","burger1");
 	img.setAttribute("class","notes");
+	img.setAttribute("onClick", "showIng('burger',burger)")
 	img.setAttribute("src","resources/diy/burger.png");
 	document.getElementById("content5").appendChild(img);
+}
+function Restore(){
+	document.getElementById("content6").style.display = "none"
+	document.getElementById("closeDiv").style.display = "none"
+}
+function showIng(_name,_obj){
+	document.getElementById("content6").innerHTML = "";
+
+	document.getElementById("content6").style.display = "block";
+	document.getElementById("closeDiv").style.display = "block";
+	
+	var img = document.createElement("img");
+	img.setAttribute("class","bigPic");
+	img.setAttribute("src","resources/diy/"+ _name+".png");
+	document.getElementById("content6").appendChild(img);
+
+	var meal = document.createElement("p");
+	meal.setAttribute("id","intro");
+	document.getElementById("content6").appendChild(meal);
+	document.getElementById("intro").innerHTML = "You will need:";
+	//console.log(_obj);
+	
+		var meal = document.createElement("div");
+		meal.setAttribute("id","mealdiv");
+		document.getElementById("content6").appendChild(meal);
+	
+	for (var i = 0; i<_obj.ing.length; i++){
+		/*var meal = document.createElement("p");
+		meal.setAttribute("id","ing"+1);
+		meal.setAttribute("class","ingrids");
+		document.getElementById("content6").appendChild(meal);*/
+		var cont = document.getElementById("mealdiv").innerHTML;	
+		document.getElementById("mealdiv").innerHTML = cont + (i+1) + ".) "+ _obj.ing[i] + "<br>";
+	}
+	
+	var meal = document.createElement("p");
+	meal.setAttribute("id","continue");
+	document.getElementById("content6").appendChild(meal);
+	document.getElementById("continue").innerHTML = "Click to Proceed >";
+	
 }

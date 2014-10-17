@@ -57,16 +57,77 @@ transition: all 0.7s ease;
 	height:300px;
 
 }
-#adobo, #carbonara {
+#adobo1, #carbonara1 {
 	 transform: rotate(7deg);
 	 left:30%;
 }
-#karekare, #pizza {
+#karekare1, #pizza1 {
 	 transform: rotate(-3deg);
 	left:70%;
 }
-#kaldereta, #burger {
+#kaldereta1, #burger1 {
 	 transform: rotate(-7deg);
 	 left:50%;
 	top: 40%;
+}
+
+#content6 {
+	display: none;
+	position:fixed;
+	background: rgba(0,0,0,.8);
+	border: 2px solid black;
+	width:902px;
+	height:562px;
+	top:50px;
+	left:330px;
+	transition: all 0.7s linear;
+}
+#closeDiv {
+	display:none;
+	position:fixed;
+	background: rgba(255,255,255,0.5);
+	vertical-align:center;
+	padding-top: .5em;
+	text-align:center;
+	font-weight:bold;
+	border: 2px solid gray;
+	width:30px;
+	height:30px;
+	top:50px;
+	left:1232px;
+	color:white;
+}
+.bigPic{
+	position: fixed;
+	top: 20%;
+}
+#intro{
+	background:rgba(0,0,0,.7);
+	padding: .5em;
+	color: white;
+	font-size:30px;
+	font-weight:bold;
+	position:fixed;
+	left:55%;
+	top: 10%;
+}
+#mealdiv{
+	background:rgba(0,0,0,.7);
+	position: fixed;
+	top: 27%;
+	left: 57%;
+	font-size: 25px;
+	color:white;
+	width: 200px;
+	padding: .5em;
+}
+#continue{
+	background:rgba(0,0,0,.7);
+	padding: .5em;
+	color: white;
+	font-size:30px;
+	font-weight:bold;
+	position:fixed;
+	left:73%;
+	top: 78%;
 }

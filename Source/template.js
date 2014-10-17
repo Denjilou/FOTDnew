@@ -11,7 +11,6 @@ function Overlay(_name) {
 	div.setAttribute("id","content5");
 	document.getElementById("content5").appendChild(div);
 	document.getElementById("content5").innerHTML = _name.facts[random];
-	
 
 }
 function Restore(){
