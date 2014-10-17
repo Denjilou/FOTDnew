@@ -25,18 +25,18 @@ document.getElementById("content4").style.backgroundImage = "url('resources/imag
 document.getElementById("content4").style.backgroundSize = "cover";
 
 var pos = 0;
-setTimeout(changePlace, 1000)
+setTimeout(changePlace, 5000)
 function changePlace(){
 	if (pos == 0){
-		document.getElementById("content1").style.left = "57.3%";
+		document.getElementById("content1").style.left = "780px";
 		
 		document.getElementById("content2").style.top = "332px";
-		document.getElementById("content2").style.right = "582px";
+		document.getElementById("content2").style.left = "330px";
 		
-		document.getElementById("content3").style.left = "57.3%";
+		document.getElementById("content3").style.left = "780px";
 		
 		document.getElementById("content4").style.top = "50px";
-		document.getElementById("content4").style.right = "582px";
+		document.getElementById("content4").style.left = "330px";
 		
 		pos = Math.floor(Math.random() * 3);
 		setTimeout(changePlace, 4000)
@@ -46,29 +46,29 @@ function changePlace(){
 		document.getElementById("content1").style.left = "330px";
 		
 		document.getElementById("content2").style.top = "332px";
-		document.getElementById("content2").style.right = "130px";
+		document.getElementById("content2").style.left = "780px";
 		
 		document.getElementById("content3").style.left = "330px";
 		document.getElementById("content3").style.top = "50px";
 
 		document.getElementById("content4").style.top = "50px";
-		document.getElementById("content4").style.right = "130px";
+		document.getElementById("content4").style.left = "780px";
 	
 	pos = Math.floor(Math.random() * 3);
 		setTimeout(changePlace, 4000)
 	}else if(pos == 2){
 	
 		document.getElementById("content1").style.top = "332px";
-		document.getElementById("content1").style.left = "57.3%";
+		document.getElementById("content1").style.left = "780px";
 		
 		document.getElementById("content2").style.top = "50px";
-		document.getElementById("content2").style.right = "582px";
+		document.getElementById("content2").style.left = "330px";
 		
-		document.getElementById("content3").style.left = "57.3%";
+		document.getElementById("content3").style.left = "780px";
 		document.getElementById("content3").style.top = "50px";
 		
 		document.getElementById("content4").style.top = "332px";
-		document.getElementById("content4").style.right = "582px";
+		document.getElementById("content4").style.left = "330px";
 	
 	pos = Math.floor(Math.random() * 3);
 		setTimeout(changePlace, 4000)
@@ -78,13 +78,13 @@ function changePlace(){
 		document.getElementById("content1").style.left = "330px";
 		
 		document.getElementById("content2").style.top = "50px";
-		document.getElementById("content2").style.right = "130px";
+		document.getElementById("content2").style.left = "780px";
 		
 		document.getElementById("content3").style.left = "332px";
 		document.getElementById("content3").style.top = "330px";
 		
 		document.getElementById("content4").style.top = "332px";
-		document.getElementById("content4").style.right = "130px";
+		document.getElementById("content4").style.left = "780px";
 	
 	pos = Math.floor(Math.random() * 3);	
 		setTimeout(changePlace, 4000)

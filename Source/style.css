@@ -70,7 +70,7 @@ border-radius:2px;
 	width:450px;
 	height:280px;
 	top:50px;
-	right:130px;
+	left:780px;
 		transition: all 0.7s ease;
 			border-radius: 3px;
 }
@@ -96,7 +96,7 @@ border-radius:2px;
 	width:450px;
 	height:280px;
 	top:332px;
-	right:130px;
+	left:780px;
 	transition: all 0.7s;
 	border-radius: 3px;
 }
@@ -123,8 +123,8 @@ border-radius:2px;
 	border: 2px solid gray;
 	width:30px;
 	height:30px;
-	top:51px;
-	right:96px;
+	top:50px;
+	left:1232px;
 	color:white;
 }
 
