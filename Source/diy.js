@@ -3,7 +3,7 @@ var num = 1;
 var el = 0;
 var foodChoices= [];
 var objectName;
-
+var check = 0;
 
 function Recipe(_name){
 	this.name=_name;
@@ -314,7 +314,7 @@ console.log(objectName.name);
 		
 		for(var i=0; i<objectName.ing.length; i++){
 			var cm = document.createElement("img");
-			cm.setAttribute("id","ingrid"+1);
+			cm.setAttribute("id",objectName.ing[i]);
 			cm.setAttribute("onclick", "placeIn(\""+objectName.ing[i]+"\")");
 			cm.setAttribute("height","100px");
 			cm.setAttribute("src", "resources/meals/alling/"+objectName.ing[i]+".png");
@@ -323,6 +323,28 @@ console.log(objectName.name);
 	}
 	function placeIn(_name){
 		console.log(_name);
+		document.getElementById("food").innerHTML = "";
+			var img = document.createElement("img");
+			img.setAttribute("src","resources/meals/walaSaPlate/alling/"+_name+".png");
+			img.setAttribute("height","100px");
+			img.setAttribute("onclick","go(\""+_name+"\")");
+			document.getElementById("food").appendChild(img);
+			
+	}
+	function go(_name){
+		if(_name == objectName.sequence[check]){
+			check++;
+			document.getElementById("food").innerHTML = "";
+			document.getElementById(_name).style.display = "none";			
+			document.getElementById("inst").innerHTML = objectName.steps[check];
+		}else{
+			document.getElementById("food").innerHTML = "";
+		}
+		if(check == objectName.sequence.length){
+			document.getElementById("content6").innerHTML = "";
+			document.getElementById("content6").style.display = "block";
+			document.getElementById("closeDiv").style.display = "block";
+		}
 	}
 	function openFire(){
 		var cm = document.createElement("img");
