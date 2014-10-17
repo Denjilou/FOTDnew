@@ -48,6 +48,13 @@ border-radius:2px;
 #content{
 
 }
+#content1,#content2,#content3,#content4{
+	opacity: .8;
+}
+
+#content1:hover,#content2:hover,#content3:hover,#content4:hover{
+	opacity: 1;
+}
 #content1{
 	position:fixed;
 	background: rgba(0,0,0,0.5);
