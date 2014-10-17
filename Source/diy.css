@@ -43,3 +43,24 @@ position:fixed;
 background: transparent;
 transition: all 0.7s ease;
 }
+
+.notes{
+	position:fixed;
+	top: 25%;
+	width: 300px;
+	height:300px;
+
+}
+#adobo, #carbonara {
+	 transform: rotate(7deg);
+	 left:30%;
+}
+#karekare, #pizza {
+	 transform: rotate(-3deg);
+	left:70%;
+}
+#kaldereta, #burger {
+	 transform: rotate(-7deg);
+	 left:50%;
+	top: 40%;
+}

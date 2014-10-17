@@ -36,11 +36,56 @@ document.getElementById("con").innerHTML = "This Module will virtually help you 
 var meal = document.createElement("p");
 meal.setAttribute("id","a");
 meal.setAttribute("class","meal1");
+meal.setAttribute("onClick","listMeal()")
 document.getElementById("content5").appendChild(meal);
 document.getElementById("a").innerHTML = "Meal";
 
 var meal1 = document.createElement("p");
 meal1.setAttribute("id","b");
 meal1.setAttribute("class","meal1");
+meal1.setAttribute("onClick","listSnack()")
 document.getElementById("content5").appendChild(meal1);
 document.getElementById("b").innerHTML = "Snacks";
+
+function listMeal(){
+	document.getElementById("content5").innerHTML = "";
+	
+	var img = document.createElement("img");
+	img.setAttribute("id","adobo");
+	img.setAttribute("class","notes");
+	img.setAttribute("src","resources/diy/adobo.png");
+	document.getElementById("content5").appendChild(img);
+	
+	var img = document.createElement("img");
+	img.setAttribute("id","karekare");
+	img.setAttribute("class","notes");
+	img.setAttribute("src","resources/diy/karekare.png");
+	document.getElementById("content5").appendChild(img);
+	
+	var img = document.createElement("img");
+	img.setAttribute("id","kaldereta");
+	img.setAttribute("class","notes");
+	img.setAttribute("src","resources/diy/kaldereta.png");
+	document.getElementById("content5").appendChild(img);
+}
+function listSnack(){
+	document.getElementById("content5").innerHTML = "";
+	
+	var img = document.createElement("img");
+	img.setAttribute("id","carbonara");
+	img.setAttribute("class","notes");
+	img.setAttribute("src","resources/diy/carbonara.png");
+	document.getElementById("content5").appendChild(img);
+	
+	var img = document.createElement("img");
+	img.setAttribute("id","pizza");
+	img.setAttribute("class","notes");
+	img.setAttribute("src","resources/diy/pizza.png");
+	document.getElementById("content5").appendChild(img);
+	
+	var img = document.createElement("img");
+	img.setAttribute("id","burger");
+	img.setAttribute("class","notes");
+	img.setAttribute("src","resources/diy/burger.png");
+	document.getElementById("content5").appendChild(img);
+}
