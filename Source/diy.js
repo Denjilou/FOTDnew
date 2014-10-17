@@ -28,13 +28,9 @@ carbonara.ing = ["noodles","ham","bacon","cream"];
 pizza.ing = ["dough","tomato sauce","pepperoni", "cheese"];
 burger.ing = ["buns","patty","cheese","mayo","ketchup"];
 //steps
-<<<<<<< HEAD
-adobo.steps = ["Heat the frying pan, add oil","Sauté garlic","Add pork","Add Sugar, Soy Sauce, Water and Vinegar. Simmer until sauce is thick","Add bayleaves","Serve with Rice"];
+adobo.steps = ["Heat the frying pan, add oil","Sauté garlic","Add pork","Add Soy Sauce","Add Vinegar","Add Water", "Add Sugar. Simmer until sauce is thick","Add bay leaves","Serve with Rice"];
 //sequence
-adobo.sequence = ["mantika","bawang","baboy",["toyo","suka","tubig","asukal"],"bayleaves"];
-=======
-adobo.steps = ["Marinate pork belly, soy sauce, bay leaves & garlic for at least 1 hour in a pan or wok.","Turn on the stove.","Add water and simmer for 30-45 minutes.","Add vinegar and simmer for 10-15 minutes.","Turn off the stove and remove marinade (sauce) leaving the meat, garlic & bay leaves in the wok.","Turn on the stove to medium heat, add cooking oil and stir fry the meat in the wok for 5-10 minutes.","Serve with hot rice. Enjoy!"];
->>>>>>> origin/master
+adobo.sequence = ["mantika","bawang","baboy","toyo","suka","tubig","asukal","bayleaves"];
 
 var cm = document.createElement("img");
 cm.setAttribute("id","manong");
@@ -97,7 +93,7 @@ function listMeal(){
 }
 function listSnack(){
 	document.getElementById("content5").innerHTML = "";
-		var meal = document.createElement("p");
+	var meal = document.createElement("p");
 	meal.setAttribute("id","con1");
 	meal.setAttribute("onClick","listMeal()")
 	document.getElementById("content5").appendChild(meal);
@@ -306,6 +302,11 @@ console.log(objectName.name);
 		document.getElementById("content5").appendChild(c);
 		document.getElementById("proced").innerHTML = "Procedure:<br>";
 		
+		var c = document.createElement("p");
+		c.setAttribute("id","inst");
+		document.getElementById("proced").appendChild(c);
+		document.getElementById("inst").innerHTML = objectName.steps[0];
+		
 		var c = document.createElement("div");
 		c.setAttribute("id","ingri");
 		document.getElementById("content5").appendChild(c);
@@ -314,11 +315,14 @@ console.log(objectName.name);
 		for(var i=0; i<objectName.ing.length; i++){
 			var cm = document.createElement("img");
 			cm.setAttribute("id","ingrid"+1);
-			cm.setAttribute("onclick", "placeIn()");
+			cm.setAttribute("onclick", "placeIn(\""+objectName.ing[i]+"\")");
 			cm.setAttribute("height","100px");
 			cm.setAttribute("src", "resources/meals/alling/"+objectName.ing[i]+".png");
 			document.getElementById("ingri").appendChild(cm);
 		}
+	}
+	function placeIn(_name){
+		console.log(_name);
 	}
 	function openFire(){
 		var cm = document.createElement("img");
