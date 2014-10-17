@@ -65,15 +65,15 @@ transition: all 0.7s ease;
 }
 #adobo1, #carbonara1 {
 	 transform: rotate(7deg);
-	 left:30%;
+	 left:25%;
 }
 #karekare1, #pizza1 {
 	 transform: rotate(-3deg);
-	left:70%;
+	left:65%;
 }
 #kaldereta1, #burger1 {
 	 transform: rotate(-7deg);
-	 left:50%;
+	 left:45%;
 	top: 40%;
 }
 
@@ -137,7 +137,7 @@ transition: all 0.7s ease;
 	font-size:30px;
 	font-weight:bold;
 	position:fixed;
-	left:73%;
+	left:70%;
 	top: 78%;
 }
 #continue:hover{
@@ -157,18 +157,18 @@ transition: all 0.7s ease;
 #listofing{
 position:fixed;
 overflow:auto;
-left:332px;
+left:337px;
 }
 
 #choice{
 position:fixed;
-left:61%;
+left:57.5%;
 }
 #check1,#check2{
 	position:fixed;
 	width:350px;
 	height:250px;
-	left:65%;
+	left:60%;
 	top: 35%;
 	padding: .3em;
 	vertical-align: middle;
@@ -184,8 +184,8 @@ left:61%;
 #check3{
 	font-size:30px;
 	position:fixed;
-	top:32%;
-	left:90.5%;
+	top:31.5%;
+	left:84%;
 	border-radius:9px;
 	vertical-align:center;
 	padding-bottom: .5em;
@@ -199,12 +199,12 @@ left:61%;
 }
 #stove,#pan{
 	position:fixed;
-	left:58%;
+	left:54%;
 	top:18%;
 }
 #fire{
 	position:fixed;
-	left:73%;
+	left:68%;
 	top:62%;
 	width: 150px;
 	height:45px;
@@ -221,6 +221,14 @@ left:61%;
 	position:fixed;
 	height:100px;
 	width:100px;
-	left: 75%;
+	left: 71%;
 	top: 45%;
+}
+#proced{
+	border: 2px solid white;
+	position:fixed;
+	height:100px;
+	width:640px;
+	left: 43%;
+	top: 55px;
 }

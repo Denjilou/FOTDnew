@@ -9,6 +9,7 @@ function Recipe(_name){
 	this.name=_name;
 	this.ing = [];
 	this.steps = [];
+	this.sequence = [];
 }
 
 var alling = new Recipe("alling");
@@ -27,7 +28,10 @@ carbonara.ing = ["noodles","ham","bacon","cream"];
 pizza.ing = ["dough","tomato sauce","pepperoni", "cheese"];
 burger.ing = ["buns","patty","cheese","mayo","ketchup"];
 //steps
-adobo.steps = ["Marinate pork belly, soy sauce, bay leaves & garlic for at least 1 hour in a pan or wok.","Turn on the stove.","Add water and simmer for 30-45 minutes.","Add vinegar and simmer for 10-15 minutes.","Turn off the stove and remove marinade (sauce) leaving the meat, garlic & bay leaves in the wok.","Turn on the stove to medium heat, add cooking oil and stir fry the meat in the wok for 5-10 minutes.","Serve with hot rice. Enjoy!"];
+adobo.steps = ["Heat the frying pan, add oil","Sauté garlic","Add pork","Add Sugar, Soy Sauce, Water and Vinegar. Simmer until sauce is thick","Add bayleaves","Serve with Rice"];
+//sequence
+adobo.sequence = ["mantika","bawang","baboy",["toyo","suka","tubig","asukal"],"bayleaves"];
+
 var cm = document.createElement("img");
 cm.setAttribute("id","manong");
 cm.setAttribute("src", "resources/image/ManongCook2.png");
@@ -244,8 +248,7 @@ console.log(objectName.name);
 		}
 		
 	}
-	
-		function checkIng() {
+	function checkIng() {
 		var temp1=foodChoices;
 		var temp2=objectName.ing;
 		temp1.sort();
@@ -293,6 +296,11 @@ console.log(objectName.name);
 		var cm = document.createElement("div");
 		cm.setAttribute("id","food");
 		document.getElementById("content5").appendChild(cm);
+		
+		var c = document.createElement("div");
+		c.setAttribute("id","proced");
+		document.getElementById("content5").appendChild(c);
+		document.getElementById("proced").innerHTML = "Procedure:<br>";
 		
 		var c = document.createElement("div");
 		c.setAttribute("id","ingri");
