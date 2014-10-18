@@ -191,3 +191,22 @@ left:61%;
 #check3:hover{
 	border: 2px solid red;
 }
+#stove,#pan{
+	position:fixed;
+	left:58%;
+	top:18%;
+}
+#fire{
+	position:fixed;
+	left:73%;
+	top:62%;
+	width: 150px;
+	height:45px;
+}
+#ingri{
+	background: rgba(100,110,110,.5);
+	width: 250px;
+	height:100%;
+	overflow:auto;
+	font-size: 20px;
+}

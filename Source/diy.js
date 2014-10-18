@@ -281,5 +281,37 @@ console.log(objectName.name);
 	}
 	function cook(){
 		document.getElementById("content5").innerHTML = "";
+		
+		var cm = document.createElement("img");
+		cm.setAttribute("id","stove");
+		cm.setAttribute("onclick", "openFire()");
+		cm.setAttribute("src", "resources/cook/stove.png");
+		document.getElementById("content5").appendChild(cm);
+		
+		var cm = document.createElement("img");
+		cm.setAttribute("id","pan");
+		cm.setAttribute("src", "resources/cook/pan.png");
+		//cm.setAttribute("onclick", "openFire()");
+		document.getElementById("content5").appendChild(cm);
+		
+		var c = document.createElement("div");
+		c.setAttribute("id","ingri");
+		document.getElementById("content5").appendChild(c);
+		document.getElementById("ingri").innerHTML = "<br>Ingredients<br>";
+		
+		for(var i=0; i<objectName.ing.length; i++){
+			var cm = document.createElement("img");
+			cm.setAttribute("id","ingrid"+1);
+			cm.setAttribute("onclick", "placeIn()");
+			cm.setAttribute("height","100px");
+			cm.setAttribute("src", "resources/meals/alling/"+objectName.ing[i]+".png");
+			document.getElementById("ingri").appendChild(cm);
+		}
+	}
+	function openFire(){
+		var cm = document.createElement("img");
+		cm.setAttribute("id","fire");
+		cm.setAttribute("src", "resources/cook/fire.gif");
+		document.getElementById("content5").appendChild(cm);
 	}
 	
