@@ -15,23 +15,19 @@ var alling = new Recipe("alling");
 var adobo = new Recipe("adobo");
 var kaldereta = new Recipe("kaldereta");
 var karekare = new Recipe("karekare");
-var tinola = new Recipe("tinola");
-var pinakbet = new Recipe("pinakbet");
 var carbonara = new Recipe("carbonara");
 var pizza = new Recipe("pizza");
 var burger = new Recipe("burger");
-
-
+//Ingredients
 alling.ing= ["kalabasa","beef","manok","kamatis","sayote","malunggay","luya","paminta","asin","okra","sitaw","pechay","talong","sibuyas","bawang","peanutbutter","alamang","toyo","suka","baboy","tubig","asukal","bayleaves","mantika","patatas","liverspread","sili","cheese","peas","carrots"];
 adobo.ing = ["bawang","toyo","suka","baboy","tubig","asukal","bayleaves","mantika"];
 kaldereta.ing = ["mantika","patatas","liverspread","beef","tubig","sili","cheese","peas","carrots","toyo"];
 karekare.ing = ["beef","tubig","sitaw","pechay","talong","sibuyas","bawang","peanutbutter","alamang"];
-tinola.ing=["manok","malunggay","sayote","tubig","mantika","luya","bawang","sibuyas"];
-pinakbet.ing=["baboy","bawang","kamatis","asin","luya","paminta","sibuyas","tubig","kalabasa","alamang","okra","sitaw","talong",];
 carbonara.ing = ["noodles","ham","bacon","cream"];
 pizza.ing = ["dough","tomato sauce","pepperoni", "cheese"];
 burger.ing = ["buns","patty","cheese","mayo","ketchup"];
-
+//steps
+adobo.steps = ["Marinate pork belly, soy sauce, bay leaves & garlic for at least 1 hour in a pan or wok.","Turn on the stove.","Add water and simmer for 30-45 minutes.","Add vinegar and simmer for 10-15 minutes.","Turn off the stove and remove marinade (sauce) leaving the meat, garlic & bay leaves in the wok.","Turn on the stove to medium heat, add cooking oil and stir fry the meat in the wok for 5-10 minutes.","Serve with hot rice. Enjoy!"];
 var cm = document.createElement("img");
 cm.setAttribute("id","manong");
 cm.setAttribute("src", "resources/image/ManongCook2.png");
@@ -292,6 +288,10 @@ console.log(objectName.name);
 		cm.setAttribute("id","pan");
 		cm.setAttribute("src", "resources/cook/pan.png");
 		//cm.setAttribute("onclick", "openFire()");
+		document.getElementById("content5").appendChild(cm);
+		
+		var cm = document.createElement("div");
+		cm.setAttribute("id","food");
 		document.getElementById("content5").appendChild(cm);
 		
 		var c = document.createElement("div");
