@@ -1,4 +1,10 @@
+var no_ing = 0;
+var num = 1;
+var el = 0;
+var foodChoices= [];
 var objectName;
+
+
 function Recipe(_name){
 	this.name=_name;
 	this.ing = [];
@@ -174,13 +180,98 @@ console.log(objectName.name);
 	div2.setAttribute("id","choice");
 	document.getElementById("content5").appendChild(div2);
 	
-		for (var i = 0; i< count; i++){
+		for (var i = 0; i< alling.ing.length; i++){
 			var img = document.createElement("img");
-			img.setAttribute("src","resources/meals/alling"+alling.ing[i]+".png");
+			img.setAttribute("src","resources/meals/alling/"+alling.ing[i]+".png");
 			img.setAttribute("height","100px");
-			//img.setAttribute("id",_name.ing[i])
-			//var name = _name.ing[i];
-		//	img.setAttribute("onClick","addToChoice(\""+name+"\","+_objname+")");
+			img.setAttribute("id",alling.ing[i]);
+			var name = alling.ing[i];
+			img.setAttribute("onClick","addToChoice(\""+name+"\")");
 			document.getElementById("listofing").appendChild(img);
 		}
 }
+	function addToChoice(_name){
+		var num = objectName.ing.length;
+		console.log(objectName.ing.length);
+		if (no_ing < objectName.ing.length) {
+
+		var newImg = document.createElement("img");
+		newImg.setAttribute("src","resources/meals/alling/"+_name+".png");
+		newImg.setAttribute("height","100px");
+		var z = _name + 1;
+		newImg.setAttribute("id",z);
+		newImg.setAttribute("onClick","back('"+z+"','"+_name+"',"+num+")");
+		document.getElementById("choice").appendChild(newImg);
+		
+		foodChoices.push(_name);
+		
+		if(no_ing == objectName.ing.length - 1){
+			
+				var p = document.createElement("img");
+				p.setAttribute("id","check1");
+				p.setAttribute("src","resources/images/button.png");
+				p.setAttribute("onClick","checkIng("+objectName.name+")");
+				p.setAttribute("height","80px");
+				document.getElementById("choice").appendChild(p);
+				var p = document.createElement("p");
+				p.setAttribute("id","check3");
+				p.setAttribute("onClick","closeCheck()");
+				document.getElementById("check1").appendChild(p);
+				document.getElementById("check3").innerHTML = "x";
+				}
+		no_ing++;
+		document.getElementById(_name).style.display = "none";
+		}
+		
+	}
+	
+	function back(_name,_name1,_obj){
+		no_ing=no_ing-1;
+		document.getElementById(_name1).style.display = "inline";
+		var elem = document.getElementById(_name);
+		elem.parentNode.removeChild(elem);
+		var index = foodChoices.indexOf(_name1);
+		delete foodChoices[index];
+		//foodChoices.splice(_name1,1);
+		console.log(foodChoices);
+		
+		if(no_ing == _obj-1){
+			var elem2 = document.getElementById("check1");
+			elem2.parentNode.removeChild(elem2);
+			var elem3 = document.getElementById("check2");
+			elem3.parentNode.removeChild(elem3);
+		}
+		
+	}
+	
+		function checkIng() {
+		var temp1=foodChoices;
+		var temp2=objectName.ing;
+		temp1.sort();
+		temp2.sort();
+		var diff = 0;
+		for (var i = 0; i < objectName.ing.length; i++) {
+			if(temp2[i] == temp1[i]) {	
+				
+			}
+			else {
+				diff = 1;
+				i = objectName.ing.length;
+			}
+			
+		}
+		if(diff == 0){
+		var h = document.createElement("img");
+				h.setAttribute("id","check2");
+				h.setAttribute("src","resources/images/button1.png");
+				h.setAttribute("height","80px");
+				h.setAttribute("onClick","cook()");
+				document.getElementById("choice").appendChild(h);
+				
+		document.getElementById("check1").style.display = "none";
+		}else{
+			alert("Ooops. A unknown ingredient is on your list!");
+			console.log(foodChoices);
+		}
+	}
+	
