@@ -138,3 +138,17 @@ transition: all 0.7s ease;
 	transition: all 0.7s linear;
 	border-radius: 5px;
 }
+#choice,#listofing{
+	width: 440px;
+	height: 500px;
+	border: 3px solid black;
+
+}
+#choice{
+position:relative;
+left:3px;
+}
+#listofing{
+position:fixed;
+left:61%;
+}

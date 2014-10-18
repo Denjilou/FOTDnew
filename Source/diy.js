@@ -161,4 +161,26 @@ console.log(objectName.name);
 	document.getElementById("closeDiv").style.display = "none";
 	document.getElementById("content5").innerHTML = "";
 	
+	var p = document.createElement("p");
+	p.setAttribute("id","stepOne");
+	document.getElementById("content5").appendChild(p);
+	document.getElementById("stepOne").innerHTML = "Choose the needed Ingredients!";
+
+	var div = document.createElement("div");
+	div.setAttribute("id","listofing");
+	document.getElementById("content5").appendChild(div);
+	
+	var div2 = document.createElement("div");
+	div2.setAttribute("id","choice");
+	document.getElementById("content5").appendChild(div2);
+	
+		for (var i = 0; i< count; i++){
+			var img = document.createElement("img");
+			img.setAttribute("src","resources/meals/alling"+alling.ing[i]+".png");
+			img.setAttribute("height","100px");
+			//img.setAttribute("id",_name.ing[i])
+			//var name = _name.ing[i];
+		//	img.setAttribute("onClick","addToChoice(\""+name+"\","+_objname+")");
+			document.getElementById("listofing").appendChild(img);
+		}
 }
