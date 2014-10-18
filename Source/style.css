@@ -131,8 +131,12 @@ border-radius:2px;
 	width:30px;
 	height:30px;
 	top:50px;
-	left:1232px;
+	left:1236px;
 	color:white;
+	border-radius:9px;
+}
+#closeDiv:hover{
+	border: 2px solid red;
 }
 
 #foot{

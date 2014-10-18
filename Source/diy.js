@@ -216,7 +216,7 @@ console.log(objectName.name);
 				var p = document.createElement("p");
 				p.setAttribute("id","check3");
 				p.setAttribute("onClick","closeCheck()");
-				document.getElementById("check1").appendChild(p);
+				document.getElementById("choice").appendChild(p);
 				document.getElementById("check3").innerHTML = "x";
 				}
 		no_ing++;
@@ -224,7 +224,10 @@ console.log(objectName.name);
 		}
 		
 	}
-	
+	function closeCheck(){
+		document.getElementById("check1").style.display = "none";
+		document.getElementById("check3").style.display = "none";
+	}
 	function back(_name,_name1,_obj){
 		no_ing=no_ing-1;
 		document.getElementById(_name1).style.display = "inline";
@@ -237,6 +240,8 @@ console.log(objectName.name);
 		
 		if(no_ing == _obj-1){
 			var elem2 = document.getElementById("check1");
+			elem2.parentNode.removeChild(elem2);
+			var elem2 = document.getElementById("check3");
 			elem2.parentNode.removeChild(elem2);
 			var elem3 = document.getElementById("check2");
 			elem3.parentNode.removeChild(elem3);
@@ -267,11 +272,14 @@ console.log(objectName.name);
 				h.setAttribute("height","80px");
 				h.setAttribute("onClick","cook()");
 				document.getElementById("choice").appendChild(h);
-				
+		document.getElementById("check3").style.display = "none";		
 		document.getElementById("check1").style.display = "none";
 		}else{
 			alert("Ooops. A unknown ingredient is on your list!");
 			console.log(foodChoices);
 		}
+	}
+	function cook(){
+		document.getElementById("content5").innerHTML = "";
 	}
 	
