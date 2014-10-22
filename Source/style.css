@@ -217,7 +217,36 @@ border-radius:2px;
 #closeDiv:hover{
 	border: 2px solid red;
 }
-
+#Pizza1 {
+	position:fixed;
+	left:560px;
+	width:450px;
+	height:280px;
+	top:90px;
+}
+#Milk1 {
+position:fixed;
+	left:560px;
+	width:450px;
+	height:280px;
+	top:90px;
+}
+#Shrimp1 {
+position:fixed;
+	left:560px;
+	width:450px;
+	height:280px;
+	top:90px;
+}
+#chuchu {
+	color:white;
+	position:fixed;
+	font-size: 25px;
+	width:450px;
+	height:562px;
+	left:41%;
+	top:370px;
+}
 #foot{
 	font-weight:bold;
 	position:fixed;

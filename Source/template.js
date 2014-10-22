@@ -7,11 +7,18 @@ function Overlay(_name) {
 	document.getElementById("content4").style.display = "none"
 
 	var random = Math.floor(Math.random() * _name.facts.length);
+	
 	var div = document.createElement("p");
-	div.setAttribute("id","content5");
+	div.setAttribute("id","chuchu");
 	document.getElementById("content5").appendChild(div);
-	document.getElementById("content5").innerHTML = _name.facts[random];
+	document.getElementById("chuchu").innerHTML = _name.facts[random];
 
+	var img = document.createElement("img");
+	img.setAttribute("id",_name.name+ "1");
+	img.setAttribute("src",""+_name.imageLink+"");
+	document.getElementById("content5").appendChild(img);
+	
+	
 }
 function Restore(){
 	document.getElementById("content5").style.display = "none"

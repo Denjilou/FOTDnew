@@ -217,7 +217,7 @@ left:57.5%;
 	font-size: 20px; 	
 }
 #food{
-	border: 2px solid white;
+	
 	position:fixed;
 	height:100px;
 	width:100px;
@@ -231,4 +231,17 @@ left:57.5%;
 	width:640px;
 	left: 43%;
 	top: 55px;
+}
+#finish{
+	position:fixed;
+	top:40%;
+	left:45%;
+}
+#text{
+	position:fixed;
+	top:20%;
+	left:50%;
+	text-align:center;
+	font-size: 30px;
+	color: white;
 }

@@ -20,17 +20,27 @@ var carbonara = new Recipe("carbonara");
 var pizza = new Recipe("pizza");
 var burger = new Recipe("burger");
 //Ingredients
-alling.ing= ["kalabasa","beef","manok","kamatis","sayote","malunggay","luya","paminta","asin","okra","sitaw","pechay","talong","sibuyas","bawang","peanutbutter","alamang","toyo","suka","baboy","tubig","asukal","bayleaves","mantika","patatas","liverspread","sili","cheese","peas","carrots"];
+alling.ing= ["kalabasa","beef","manok","kamatis","sayote","malunggay","luya","dough","sauce","pepperoni","paminta","asin","okra","sitaw","ham","bacon","cream","pechay","talong","sibuyas","bawang","peanutbutter","alamang","toyo","suka","baboy","tubig","asukal","bayleaves","mantika","bun","patty","sauce","patatas","liverspread","sili","cheese","peas","carrots"];
 adobo.ing = ["bawang","toyo","suka","baboy","tubig","asukal","bayleaves","mantika"];
 kaldereta.ing = ["mantika","patatas","liverspread","beef","tubig","sili","cheese","peas","carrots","toyo"];
 karekare.ing = ["beef","tubig","sitaw","pechay","talong","sibuyas","bawang","peanutbutter","alamang"];
 carbonara.ing = ["noodles","ham","bacon","cream"];
-pizza.ing = ["dough","tomato sauce","pepperoni", "cheese"];
-burger.ing = ["buns","patty","cheese","mayo","ketchup"];
+pizza.ing = ["dough","sauce","pepperoni", "cheese"];
+burger.ing = ["bun","patty","cheese","sauce"];
 //steps
 adobo.steps = ["Heat the frying pan, add oil","Sauté garlic","Add pork","Add Soy Sauce","Add Vinegar","Add Water", "Add Sugar. Simmer until sauce is thick","Add bay leaves","Serve with Rice"];
+kaldereta.steps = ["Heat the frying pan, add oil","Add Potatoes","Add liver spread","Add beef","Add water","Add Soy Sauce","Add Sili","Add peas","Add carrots","Add cheese"];
+karekare.steps = ["Boil Water","Add beef","Add Sibuyas","Add bawang","Add talong","Add pechay","Add sitaw","Add peanutbutter","Add alamang"];
+carbonara.steps = ["Fry Bacon","Add ham","Kunin tas ilagay sa noodles. Add Cream"];
+pizza.steps = ["Roll the Dough","Add tomato sauce","Add pepperoni","Add Cheese"];
+burger.steps = ["Set aside Buns","Add patty","Add cheese","Add Sauce"];
 //sequence
 adobo.sequence = ["mantika","bawang","baboy","toyo","suka","tubig","asukal","bayleaves"];
+kaldereta.sequence = ["mantika","patatas","liverspread","beef","tubig","toyo","sili","peas","carrots","cheese"];
+karekare.sequence = ["tubig","beef","sibuyas","bawang","talong","pechay","sitaw","peanutbutter","alamang"];
+carbonara.sequence = ["bacon","ham","cream"];
+pizza.sequence = ["dough","sauce","pepperoni","cheese"];
+burger.sequence = ["bun","patty","cheese","sauce"];
 
 var cm = document.createElement("img");
 cm.setAttribute("id","manong");
@@ -339,11 +349,24 @@ console.log(objectName.name);
 			document.getElementById("inst").innerHTML = objectName.steps[check];
 		}else{
 			document.getElementById("food").innerHTML = "";
+			alert("Wrong Ingredient!");
 		}
 		if(check == objectName.sequence.length){
 			document.getElementById("content6").innerHTML = "";
 			document.getElementById("content6").style.display = "block";
 			document.getElementById("closeDiv").style.display = "block";
+			document.getElementById("closeDiv").setAttribute("onClick", "location.href='diy.html'");
+			
+			var c = document.createElement("p");
+			c.setAttribute("id","text");
+			document.getElementById("content6").appendChild(c);
+			document.getElementById("text").innerHTML = "Your "+ objectName.name + " is done!<br> HAPPY EATING";
+			var cm = document.createElement("img");
+			cm.setAttribute("id","finish");
+			cm.setAttribute("src", "resources/diy/"+ objectName.name +".jpg");
+			document.getElementById("content6").appendChild(cm);
+			document.getElementById("content5").style.display = "none";
+			
 		}
 	}
 	function openFire(){
